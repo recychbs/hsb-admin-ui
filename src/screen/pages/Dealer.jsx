@@ -8,7 +8,7 @@ function Dealer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/fetchDealerDetails/')
+    fetch('https://django-djreact-app-d5af3d4e3559.herokuapp.com/fetchDealerDetails/')
       .then(response => response.json())
       .then(data =>{ 
         setData(data);     
