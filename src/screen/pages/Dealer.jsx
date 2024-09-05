@@ -56,7 +56,7 @@ function Dealer() {
       });
     }
 
-
+console.log(dealers);
 
 
   // const dealers = [
