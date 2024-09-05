@@ -40,7 +40,7 @@ function Dealer() {
         PAN_Img:data[i].PAN_Photo.url,
         LICENSE_No: data[i].LICENSE_No,
         LICENSE_Img:data[i].LICENSE_Photo.url,
-        Vehicle_Img:data[i].Vehicle_Photo.url,
+        Vehicle_Img:data[i].Vehicle_Photo,
         Vehicle_No: data[i].Vehicle_No,
         Account_NO: data[i].Bank_Acc,
         IFSC_CODE: data[i].IFSC_CODE,
