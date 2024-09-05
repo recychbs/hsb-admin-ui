@@ -37,7 +37,7 @@ function Dealer() {
         Aadhar_No: data[i].Aadhar_No,
         Aadhar_Img:data[i].Aadhar_Photo,
         PAN_No: data[i].PAN_No,
-        PAN_Img:data[i].PAN_Photo.url,
+        PAN_Img:data[i].PAN_Photo,
         LICENSE_No: data[i].LICENSE_No,
         LICENSE_Img:data[i].LICENSE_Photo,
         Vehicle_Img:data[i].Vehicle_Photo,
