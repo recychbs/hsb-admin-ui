@@ -112,7 +112,7 @@ console.log(dealers);
                   {dealer.Dealer_Name}
                 </td>
                 <td>{dealer.phone}</td>
-                <td>{dealer.mail}</td>
+                <td>{dealer.Aadhar_Img}</td>
               </tr>
             ))}
           </tbody>
