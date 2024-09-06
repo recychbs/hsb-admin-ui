@@ -11,7 +11,8 @@ function Dealerdetail() {
  
     const [inputValue, setInputValue] = useState('');
 
-   const[color,setColor] = useState('blue');
+   const[approveColor,setapproveColor] = useState('blue');
+   const[rejectColor,setrejectColor] = useState('blue');
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
@@ -38,7 +39,7 @@ function Dealerdetail() {
  
       status =  "extradata";
      
-      setColor('red');
+      setrejectColor('red');
       console.log("Decline Button Clicked",status);
         
  
@@ -69,7 +70,7 @@ function Dealerdetail() {
         status = "approved";
  
         console.log("Approve Button Clicked",status);
-        setColor('green');
+        setapproveColor('green');
 
  
         try{
