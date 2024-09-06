@@ -142,9 +142,9 @@ function Dealerdetail() {
             <p><strong>Postcode:</strong> {dealer.POST_CODE}</p>
             <p><strong>Nationality:</strong> {dealer.Nationality}</p>  
             <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
-                <button className='approveButton' style={{ backgroundColor: color, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
+                <button className='approveButton' style={{ backgroundColor: approveColor, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
   onClick={approveButton}>Approved</button>
-                <button className='rejectButton' style={{ backgroundColor: color, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
+                <button className='rejectButton' style={{ backgroundColor: rejectColor, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
   onClick={declineButton}>Rejected</button>
                 <div style={{}}>
                     <span style={{fontSize:"20px",fontWeight: "700"}}>Enter queries/ Requirements :</span>
