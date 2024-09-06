@@ -70,7 +70,7 @@ function Dealerdetail() {
         status = "approved";
  
         console.log("Approve Button Clicked",status);
-        setapproveColor('pink');
+        setapproveColor('blue');
 
  
         try{
