@@ -10,6 +10,8 @@ function Dealerdetail() {
     console.log(dealer.Aadhar_Img);
  
     const [inputValue, setInputValue] = useState('');
+
+   const[color,setColor] = useState('blue');
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
@@ -36,7 +38,7 @@ function Dealerdetail() {
  
       status =  "extradata";
      
- 
+      setColor('red');
       console.log("Decline Button Clicked",status);
         
  
@@ -67,7 +69,8 @@ function Dealerdetail() {
         status = "approved";
  
         console.log("Approve Button Clicked",status);
- 
+        setColor('green');
+
  
         try{
             const response = await fetch('https://django-djreact-app-d5af3d4e3559.herokuapp.com/StatusActive/', {
@@ -138,8 +141,10 @@ function Dealerdetail() {
             <p><strong>Postcode:</strong> {dealer.POST_CODE}</p>
             <p><strong>Nationality:</strong> {dealer.Nationality}</p>  
             <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
-                <button className='statusbutton' onClick={approveButton}>Approved</button>
-                <button className='statusbutton' onClick={declineButton}>Rejected</button>
+                <button className='statusbutton' style={{ backgroundColor: color, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
+  onClick={approveButton}>Approved</button>
+                <button className='statusbutton' style={{ backgroundColor: color, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
+  onClick={declineButton}>Rejected</button>
                 <div style={{}}>
                     <span style={{fontSize:"20px",fontWeight: "700"}}>Enter queries/ Requirements :</span>
                     <input
