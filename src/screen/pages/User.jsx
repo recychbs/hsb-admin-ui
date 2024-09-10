@@ -8,10 +8,7 @@ function User() {
     fetch('https://django-djreact-app-d5af3d4e3559.herokuapp.com/Get_UserProfile/')
       .then(response => response.json())
       .then(data =>{ 
-        setData(data);     
-
-
-
+        setData(data);    
         
         setLoading(false);
     })
