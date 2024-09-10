@@ -14,7 +14,7 @@ function Dealerdetail() {
    const[approveColor,setapproveColor] = useState('blue');
    const[rejectColor,setrejectColor] = useState('blue');
 
-   const [isInputVisible, setIsInputVisible] = useState();
+   const [isInputVisible, setIsInputVisible] = useState(true);
 
   if (application_status === 'approved' || application_status === 'extradata'){
       setIsInputVisible(false);
@@ -49,7 +49,7 @@ function Dealerdetail() {
       status =  "extradata";
      
       setrejectColor('red');
-      console.log("Decline Button Clicked",status);
+      console.log("Decline Button Clicked-",status);
         
       setIsInputVisible(false);
       try{
@@ -78,7 +78,7 @@ function Dealerdetail() {
         e.preventDefault();
         status = "approved";
  
-        console.log("Approve Button Clicked",status);
+        console.log("Approve Button Clicked-",status);
         setapproveColor('green');
         setIsInputVisible(false);
  
