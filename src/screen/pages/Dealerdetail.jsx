@@ -16,15 +16,21 @@ function Dealerdetail() {
 
    const [isInputVisible, setIsInputVisible] = useState(true);
 
- console.log("Visible value is-",isInputVisible);
  console.log("Application status value is-",application_status);
 
   if (application_status === 'approved' || application_status === 'extradata'){
       setIsInputVisible(false);
+ console.log("If block works value is - ",isInputVisible);
+   
   }
  else{
      setIsInputVisible(true);
+ console.log("Else block works value is - ",isInputVisible);
+  
  }
+
+ console.log("Visible value is-",isInputVisible);
+ 
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
