@@ -13,6 +13,8 @@ function Dealerdetail() {
 
    const[approveColor,setapproveColor] = useState('blue');
    const[rejectColor,setrejectColor] = useState('blue');
+
+   const [isInputVisible, setIsInputVisible] = useState(true);
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
@@ -42,7 +44,7 @@ function Dealerdetail() {
       setrejectColor('red');
       console.log("Decline Button Clicked",status);
         
- 
+      setIsInputVisible(false);
       try{
  
           const response = await fetch('https://django-djreact-app-d5af3d4e3559.herokuapp.com/StatusActive/', {
@@ -71,7 +73,7 @@ function Dealerdetail() {
  
         console.log("Approve Button Clicked",status);
         setapproveColor('green');
-
+        setIsInputVisible(false);
  
         try{
             const response = await fetch('https://django-djreact-app-d5af3d4e3559.herokuapp.com/StatusActive/', {
@@ -146,6 +148,7 @@ function Dealerdetail() {
   onClick={approveButton}>Approved</button>
                 <button className='rejectButton' style={{ backgroundColor: rejectColor, color: 'white', padding: '10px', border: 'none', cursor: 'pointer' }}
   onClick={declineButton}>Rejected</button>
+             {isInputVisible && (
                 <div style={{}}>
                     <span style={{fontSize:"20px",fontWeight: "700"}}>Enter queries/ Requirements :</span>
                     <input
@@ -156,6 +159,8 @@ function Dealerdetail() {
             />
                 <button type="submit" className="btn btn-primary">Submit</button>
                 </div>
+               )}
+         
             </div>    
           </div>
         </div>
