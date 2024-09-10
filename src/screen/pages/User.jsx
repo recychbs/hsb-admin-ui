@@ -23,6 +23,7 @@ const users=[];
 
   for (let i=0;i<data.length;1++){
         users.push({
+        id:data[1].id,
         User_Name: data[i].user_Name,
         mail: data[i].Email,
         phone: data[i].Phone_Number,
@@ -77,7 +78,7 @@ const users=[];
               <tr key={user.id}>
                 <th scope="row">{user.id}</th>
                 <td>
-                  {user.name}
+                  {user.User_Name}
                 </td>
                 <td>{user.phone}</td>
                 <td
