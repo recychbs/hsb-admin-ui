@@ -37,11 +37,11 @@ function Dealerdetail() {
 
   // Use useEffect to handle the state change
   useEffect(() => {
-    console.log("application status value is-", application_status);
+    console.log("application  value is-", application_status);
 
     if (application_status === 'approved' || application_status === 'extradata') {
       setIsInputVisible(false);
-      console.log("if block works, value is now - ", isInputVisible); // Note: isInputVisible might not reflect the new value immediately here due to React's async state updates
+      console.log("if  works, value is now - ", isInputVisible); // Note: isInputVisible might not reflect the new value immediately here due to React's async state updates
     } else {
       setIsInputVisible(true);
       console.log("Else block works, value is now - ", isInputVisible);
