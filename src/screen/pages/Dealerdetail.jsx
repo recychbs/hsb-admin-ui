@@ -13,6 +13,7 @@ function Dealerdetail() {
 
    const[approveColor,setapproveColor] = useState('blue');
    const[rejectColor,setrejectColor] = useState('blue');
+ 
 
  //   const [isInputVisible, setIsInputVisible] = useState(true);
 
