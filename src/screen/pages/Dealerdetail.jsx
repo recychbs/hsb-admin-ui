@@ -16,12 +16,12 @@ function Dealerdetail() {
 
    const [isInputVisible, setIsInputVisible] = useState(true);
 
-  if (application_status === 'approved' || application_status === 'extradata'){
-      setIsInputVisible(false);
-  }
- else{
-     setIsInputVisible(true);
- }
+ //  if (application_status === 'approved' || application_status === 'extradata'){
+ //      setIsInputVisible(false);
+ //  }
+ // else{
+ //     setIsInputVisible(true);
+ // }
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
