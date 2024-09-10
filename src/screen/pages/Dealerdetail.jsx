@@ -7,14 +7,21 @@ function Dealerdetail() {
     const { dealer } = location.state || {};
     let status ="";
     const dealer_id= dealer.Dealer_ID;
-    console.log(dealer.Aadhar_Img);
+    const application_status = dealer.Status;
  
     const [inputValue, setInputValue] = useState('');
 
    const[approveColor,setapproveColor] = useState('blue');
    const[rejectColor,setrejectColor] = useState('blue');
 
-   const [isInputVisible, setIsInputVisible] = useState(true);
+   const [isInputVisible, setIsInputVisible] = useState();
+
+  if (application_status === 'approved' || application_status === 'extradata'){
+      setIsInputVisible(false);
+  }
+ else{
+     setIsInputVisible(true);
+ }
  
     const handleInputChange = (event) => {
       setInputValue(event.target.value);
