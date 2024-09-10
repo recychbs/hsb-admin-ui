@@ -16,7 +16,7 @@ function Dealerdetail() {
 
    const [isInputVisible, setIsInputVisible] = useState(true);
 
- console.log(isInputVisible);
+ console.log("Visible value is-",isInputVisible);
 
  //  if (application_status === 'approved' || application_status === 'extradata'){
  //      setIsInputVisible(false);
