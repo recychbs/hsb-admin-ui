@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
  
  
 function Dealerdetail() {
@@ -14,22 +14,40 @@ function Dealerdetail() {
    const[approveColor,setapproveColor] = useState('blue');
    const[rejectColor,setrejectColor] = useState('blue');
 
-   const [isInputVisible, setIsInputVisible] = useState(true);
+ //   const [isInputVisible, setIsInputVisible] = useState(true);
 
- console.log("Application status value is-",application_status);
+ // console.log("Application status value is-",application_status);
 
-  if (application_status === 'approved' || application_status === 'extradata'){
-      setIsInputVisible(false);
- console.log("If block works value is - ",isInputVisible);
+ //  if (application_status === 'approved' || application_status === 'extradata'){
+ //      setIsInputVisible(false);
+ // console.log("If block works value is - ",isInputVisible);
    
-  }
- else{
-     setIsInputVisible(true);
- console.log("Else block works value is - ",isInputVisible);
+ //  }
+ // else{
+ //     setIsInputVisible(true);
+ // console.log("Else block works value is - ",isInputVisible);
   
- }
+ // }
 
- console.log("Visible value is-",isInputVisible);
+ // console.log("Visible value is-",isInputVisible);
+
+
+ const YourComponent = ({ application_status }) => {
+  const [isInputVisible, setIsInputVisible] = useState(true);
+
+  // Use useEffect to handle the state change
+  useEffect(() => {
+    console.log("Application status value is-", application_status);
+
+    if (application_status === 'approved' || application_status === 'extradata') {
+      setIsInputVisible(false);
+      console.log("If block works, value is now - ", isInputVisible); // Note: isInputVisible might not reflect the new value immediately here due to React's async state updates
+    } else {
+      setIsInputVisible(true);
+      console.log("Else block works, value is now - ", isInputVisible);
+    }
+  }, [application_status]); // Dependency array ensures this runs only when application_status changes
+
  
  
     const handleInputChange = (event) => {
