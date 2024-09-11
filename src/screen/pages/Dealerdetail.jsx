@@ -34,26 +34,26 @@ function Dealerdetail() {
 
 
 
-const YourComponent = ({ application_status }) => {
+// const YourComponent = ({ application_status }) => {
   const [isInputVisible, setIsInputVisible] = useState(true);
 
-  // Use useEffect to handle the state change based on application_status
-  useEffect(() => {
-    console.log("Application status value is-", application_status);
+//   // Use useEffect to handle the state change based on application_status
+//   useEffect(() => {
+//     console.log("Application status value is-", application_status);
 
-    if (application_status === 'approved' || application_status === 'extradata') {
-      setIsInputVisible(false);
-    } else {
-      setIsInputVisible(true);
-    }
+//     if (application_status === 'approved' || application_status === 'extradata') {
+//       setIsInputVisible(false);
+//     } else {
+//       setIsInputVisible(true);
+//     }
 
-    console.log("isInputVisible updated value is - ", isInputVisible); // May not reflect the latest value immediately
-  }, [application_status]); // Dependency array ensures this runs only when application_status changes
+//     console.log("isInputVisible updated value is - ", isInputVisible); // May not reflect the latest value immediately
+//   }, [application_status]); // Dependency array ensures this runs only when application_status changes
 
-  // Log the actual rendered value
-  useEffect(() => {
-    console.log("Rendered isInputVisible value is - ", isInputVisible);
-  }, [isInputVisible]); // Log when isInputVisible changes after a render
+//   // Log the actual rendered value
+//   useEffect(() => {
+//     console.log("Rendered isInputVisible value is - ", isInputVisible);
+//   }, [isInputVisible]); // Log when isInputVisible changes after a render
 
  
  
